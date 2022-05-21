@@ -1,0 +1,38 @@
+//Install kubectl
+sudo apt-get update
+sudo apt-get install -y apt-transport-https ca-certificates curl
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt-get update
+sudo apt-get install -y kubectl
+
+//install minikube
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+
+//Start VM
+sudo apt-get install -y conntrack
+sudo minikube start --vm-driver=none
+kubectl cluster-info //Check the Status
+
+//kubernetes deployment
+mkdir kube
+(create the file knote.yaml as mentioned in the folder)
+sudo kubectl explain deployment
+kubectl explain deployment.spec.replicas
+cd ..
+sudo kubectl apply -f kube
+sudo kubectl get pods --watch
+
+// Get URL
+sudo minikube service knote --url 
+curl <<>> #address to verify
+
+//verify
+kubectl get pods --watch
+
+// Star the minikube
+sudo minikube status
+
+andalike/node8080 -> Image in port 8080
