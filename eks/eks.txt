@@ -29,7 +29,11 @@ kubectl get pods --all-namespaces // to check all namespaces
 Note: Error: error: exec plugin: invalid apiVersion "client.authentication.k8s.io/v1alpha1"
 Fix:
 1) pip3 install awscli --upgrade --user
-2) aws eks update-kubeconfig --name knote1 --region ap-south-1
+2) aws eks update-kubeconfig --name knote --region ap-south-1
 */*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
 //Delete Nodes
 eksctl delete cluster --region=ap-south-1 --name=knote
+
+*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/
+Time Taken:
+2022-05-22 08:52:56  ->2022-05-22 09:08:42 (Approx 16 Mins.)
