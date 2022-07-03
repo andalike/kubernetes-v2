@@ -6,14 +6,16 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 sudo apt-get install -y kubectl
 
+//Install Docker 
+
 //install minikube
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+curl -LO https://storage.googleapis.com/minikube/releases/v1.22.0/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
 
 //Start VM
 sudo apt-get install -y conntrack
-sudo minikube start --vm-driver=none
+sudo minikube start --vm-driver=none 
 kubectl cluster-info //Check the Status
 
 //kubernetes deployment
@@ -36,3 +38,8 @@ kubectl get pods --watch
 sudo minikube status
 
 andalike/node8080 -> Image in port 8080
+
+
+
+//BUGS/ISSUES
+1) GitHub Bug: 14438( https://github.com/kubernetes/minikube/issues/14438) - Present in the script
