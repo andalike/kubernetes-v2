@@ -7,6 +7,11 @@
             "Resource": "*"
         },
         {
+            "Action": "iam:*",
+            "Effect": "Allow",
+            "Resource": "*"
+        },
+        {
             "Effect": "Allow",
             "Action": "elasticloadbalancing:*",
             "Resource": "*"
@@ -38,14 +43,14 @@
                 }
             }
         },
-         {
+        {
             "Effect": "Allow",
             "Action": [
                 "cloudformation:*"
             ],
             "Resource": "*"
         },
-          {
+        {
             "Effect": "Allow",
             "Action": "eks:*",
             "Resource": "*"
@@ -62,21 +67,21 @@
             "Effect": "Allow"
         },
         {
-             "Action": [
-               "kms:CreateGrant",
-               "kms:DescribeKey"
-             ],
-             "Resource": "*",
-             "Effect": "Allow"
+            "Action": [
+                "kms:CreateGrant",
+                "kms:DescribeKey"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
         },
         {
-             "Action": [
-               "logs:PutRetentionPolicy"
-             ],
-             "Resource": "*",
-             "Effect": "Allow"
+            "Action": [
+                "logs:PutRetentionPolicy"
+            ],
+            "Resource": "*",
+            "Effect": "Allow"
         },
-         {
+        {
             "Effect": "Allow",
             "Action": [
                 "iam:CreateInstanceProfile",
@@ -139,6 +144,17 @@
                     ]
                 }
             }
-        }        
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iam:AttachRolePolicy",
+                "iam:CreateRole",
+                "iam:GetRole",
+                "iam:CreatePolicy",
+                "iam:PutRolePolicy"
+            ],
+            "Resource": "*"
+        }
     ]
 }
