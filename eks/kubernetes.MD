@@ -16,9 +16,7 @@ $ kubectl describe nodes <node-name>
 $ kubectl get pods                              # Get All Pods
   
 $ kubectl describe pods <pod-name>
-  
-$ kubectl describe pods/<pod-name>              # Equivalent to previous
-  
+    
 
 # List Services Sorted by Name
   
